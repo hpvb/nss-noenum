@@ -10,8 +10,8 @@ libprefix = ${exec_prefix}/lib$(BITSOFS)
 DESTDIR=
 OBJSUFFIX=$(BITSOFS).o
 OBJECTS=passwd$(OBJSUFFIX) group$(OBJSUFFIX) shadow$(OBJSUFFIX)
-SHARED_OBJECT = libnss_noenum$(BITSOFS).so.2
-INSTALL_NAME = libnss_noenum.so.2
+SHARED_OBJECT = libnss_noenum$(BITSOFS).so.0
+INSTALL_NAME = libnss_noenum.so.0
 # This only works sometimes, give manually when needed:
 BIT_CFLAGS = $(if $(BITSOFS),-m$(BITSOFS))
 CFLAGS = $(BIT_CFLAGS) -g -O2 -Wall -Wextra -Wno-unused-parameter
