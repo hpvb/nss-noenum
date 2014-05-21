@@ -1,0 +1,11 @@
+libnss-noenum will disable enumeration of group, password and shadow entries without support from the other nss modules. This will let you use pam_ldap or pam_ldapd and not worry about a lot of ldap traffic when a program attempts to enumerate all users. 
+
+It works by emitting an 'unavailable' status for generic walks of getpwent(3) but 'success' and 'notfound' for the getpwnam(3) and friends. An example /etc/nsswitch.conf:
+
+passwd:     files noenum [UNAVAIL=return] ldap
+group:      files noenum [UNAVAIL=return] ldap
+shadow:     files noenum [UNAVAIL=return] ldap
+
+this will still allow you to enumerate local users, but not remote ones.
+
+For more fine-grained control consider switching to SSSD (https://fedorahosted.org/sssd/)

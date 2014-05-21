@@ -1,0 +1,16 @@
+Source: libnss-noenum
+Section: admin
+Priority: extra
+Maintainer: Hein-Pieter van Braam <hp@tmm.cx>
+Build-Depends: debhelper (>= 7), gcc-multilib [sparc i386 kfreebsd-amd64 amd64 mips mipsel powerpc s390 s390x], dpkg-dev (>= 1.15.7~)
+Standards-Version: 3.9.5
+Vcs-Browser: https://github.com/hpvb/nss-noenum
+Vcs-Git: git://github.com/hpvb/nss-noenum.git
+
+Package: libnss-noenum
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: ${alternatelibs:Suggests}
+Description: nss module to allow disabling of enumeration of nss databases
+ This Name Service Switch (NSS) module emits not available for nss database 
+ walking. This is useful for slower databases such as LDAP.

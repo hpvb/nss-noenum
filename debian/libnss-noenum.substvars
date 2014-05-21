@@ -1,0 +1,3 @@
+alternatelibs:Suggests=libc6-i386 (>= 2.1.3)
+shlibs:Depends=libc6 (>= 2.2.5)
+misc:Depends=

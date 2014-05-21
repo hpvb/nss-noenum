@@ -1,0 +1,6 @@
+libnss-noenum - Disable further enumeration of nss databases
+
+Copyright 2014 by Hein-Pieter van Braam <hp@tmm.cx>
+
+Licensed under the GNU Lesser GPL v3 or any later version. 
+See COPYING for details.
