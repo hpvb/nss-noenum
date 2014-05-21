@@ -48,6 +48,6 @@ enum nss_status
 _nss_noenum_getgrent_r (struct group *gr, char *buffer, size_t buflen,
 			int *errnop)
 {
-  *errnop = -1;
+  *errnop = ENOENT;
   return NSS_STATUS_UNAVAIL;
 }

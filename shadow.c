@@ -40,6 +40,6 @@ enum nss_status
 _nss_noenum_getspent_r (struct spwd *spw, char *buffer, size_t buflen,
 			int *errnop)
 {
-  *errnop = 0;
+  *errnop = ENOENT;
   return NSS_STATUS_UNAVAIL;
 }

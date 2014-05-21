@@ -48,6 +48,6 @@ enum nss_status
 _nss_noenum_getpwent_r (struct passwd *pw, char *buffer, size_t buflen,
 			int *errnop)
 {
-  *errnop = -1;
+  *errnop = ENOENT;
   return NSS_STATUS_UNAVAIL;
 }
