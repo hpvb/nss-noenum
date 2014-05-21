@@ -1,4 +1,6 @@
 # Makefile for nss-noenum
+# 
+# This makefile was slightly tweaked from nss-extrausers
 
 CC = gcc
 prefix = /usr
