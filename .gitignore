@@ -1,0 +1,5 @@
+*.o
+*.so.*
+build-arch-32-stamp
+build-arch-stamp
+debian/libnss-noenum/
